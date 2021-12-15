@@ -26,16 +26,16 @@ const HeaderContainer = () => {
             <Nav
               className="me-auto my-2 my-lg-0"
               style={{ maxHeight: "100px" }}
-              navbarScroll
+              
             >
-              <Nav.Link href="#action1">About us</Nav.Link>
-              <Nav.Link href="#action2">Categories</Nav.Link>
-              <Nav.Link href="#action1">Blog</Nav.Link>
-              <Nav.Link href="#action2">Contact us</Nav.Link>
+              <Nav.Link href="#action1" className='ms-5 text-dark no-bold'>About us</Nav.Link>
+              <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Categories</Nav.Link>
+              <Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link>
+              <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link>
             </Nav>
-            <Nav className="ml-auto">
-              <Button>Login</Button>
-              <NavDropdown title="Eng" id="navbarScrollingDropdown">
+            <Nav className="ml-auto mob-flex">
+              <Button className='btn-login'>Login</Button>
+              <NavDropdown title="Eng" id="navbarScrollingDropdown" className='dropdown-lang text-dark no-bold ms-3'>
                 <NavDropdown.Item href="#action3">Eng</NavDropdown.Item>
               </NavDropdown>
             </Nav>

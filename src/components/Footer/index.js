@@ -26,7 +26,7 @@ const Footer = () => {
                   fill="#181E4B"
                 />
               </svg>
-              <p>
+              <p className='text-footer my-3'>
                 Book your trip in minute, get full<br></br> Control for much
                 longer.
               </p>
@@ -35,24 +35,24 @@ const Footer = () => {
           <Col lg={4} md={4} sm={12} xs={12}>
             <Row>
               <Col lg={4} md={4} sm={12} xs={12}>
-                <h6 className="my-4">Company</h6>
-                <ul className="list-unstyled">
+                <h6 className="my-4 font-bold">Company</h6>
+                <ul className="list-unstyled text-footer ">
                   <li className="my-3">About</li>
                   <li className="my-3">Careers</li>
                   <li className="my-3">Mobile</li>
                 </ul>
               </Col>
               <Col lg={4} md={4} sm={12} xs={12}>
-                <h6 className="my-4">Contact</h6>
-                <ul className="list-unstyled">
+                <h6 className="my-4 font-bold">Contact</h6>
+                <ul className="list-unstyled text-footer ">
                   <li className="my-3">Help/FAQ</li>
                   <li className="my-3">Press</li>
                   <li className="my-3">Affilates</li>
                 </ul>
               </Col>
               <Col lg={4} md={4} sm={12} xs={12}>
-                <h6 className="my-4">More</h6>
-                <ul className="list-unstyled">
+                <h6 className="my-4 font-bold">More</h6>
+                <ul className="list-unstyled text-footer ">
                   <li className="my-3">Airlinefees</li>
                   <li className="my-3">Airline</li>
                   <li className="my-3">Low fare tips</li>
@@ -73,7 +73,7 @@ const Footer = () => {
               </Col>
             </Row>
             <Row>
-              <p>Discover our app</p>
+              <p className='text-footer'>Discover our app</p>
             </Row>
             <Row>
               <Col lg={6} md={6} sm={6} xs={6}>
@@ -86,7 +86,7 @@ const Footer = () => {
           </Col>
         </Row>
         <Row style={{ paddingTop: "50px" }}>
-          <p className="text-center">All rights reserved@jadoo.co</p>
+          <p className="text-center text-footer small-font">All rights reserved@jadoo.co</p>
         </Row>
       </Container>
     </div>

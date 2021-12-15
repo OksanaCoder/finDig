@@ -23,8 +23,8 @@ const LoginPage = ({
       <Col lg={6} md={6} sm={12} xs={12} className='center-vertically login-wrapper'>
     <div>
       <div className='text-center'>
-      <h1>Login</h1>
-      <h6>Sign in to your existing account</h6>
+      <h1 className='h1'>Login</h1>
+      <h6 className='subtitle letter-space-3'>Sign in to your existing account</h6>
       </div>
       <div>
         <Formik
@@ -60,7 +60,8 @@ const LoginPage = ({
                 errorText={errors.email && touched.email && errors.email}
                 value={values.email}
                 onChange={handleChange}
-                shrink="false"
+                // shrink="false"
+                className='my-5'
               />
               <Input
                 placeholder="**********"
@@ -74,7 +75,9 @@ const LoginPage = ({
                 }
                 value={values.password}
                 onChange={handleChange}
+                className='my-1'
               />
+              
               <div>
                 {/* <Link to="/forgot">Forgot password ?</Link> */}
                 <Button
@@ -82,17 +85,17 @@ const LoginPage = ({
                   variant="contained"
                   color="primary"
                   onClick={handleSubmit1}
-                  className="my-3 btn-primary w-100 py-3"
+                  className="my-4 btn-primary w-100 py-3"
                 >
                   Login
                 </Button>
               </div>
-              <Row>
-                <Col lg={6} md={6} sm={12} xs={12} >
+              <Row className='d-flex align-items-center justify-content-between'>
+                <Col lg={6} md={6} sm={6} xs={6} >
                 <a href="">Forgot your password?</a>
                 </Col>
-                <Col lg={6} md={6} sm={12} xs={12} >
-                <a href="">I don't have an account</a>
+                <Col lg={6} md={6} sm={6} xs={6} style={{textAlign: 'right'}}>
+                <a href="" >I don't have an account</a>
                 </Col>
               </Row>
             </form>

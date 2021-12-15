@@ -21,3 +21,13 @@
   width: 70.55px;
 height: 70.45px;
 }
+
+.font-bold {
+    font-weight: bold;
+}
+.text-footer {
+    color: #5E6282;
+}
+.small-font {
+    font-size: 12px;
+}
