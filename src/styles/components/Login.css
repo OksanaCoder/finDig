@@ -1,0 +1,32 @@
+.row {
+  --bs-gutter-x: 0 !important;
+}
+.center-vertically {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+    background-color: #1385CC;
+    color: #fff;
+}
+.MuiButton-containedPrimary {
+    background-color: #1385CC !important;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    box-shadow: none !important;
+}
+.w-100 {
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .login-wrapper {
+        padding: 40px;
+    }
+}
