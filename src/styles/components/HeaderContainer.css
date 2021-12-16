@@ -6,12 +6,12 @@
     font-weight: 300;
 }
 .btn-login {
-    padding: 5px 40px !important;
+    padding: 6px 40px !important;
 }
 .dropdown-lang {
     border: 1px solid #E3E3E3;
     border-radius: 5px;
-    padding: 5px 20px !important;
+    padding: 0px 20px !important;
 }
 .navbar-nav-scroll {
     max-height: 100% !important;
@@ -21,9 +21,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: row !important;
-    padding-top: 60px ;
+    /* padding-top: 60px ; */
 }
 @media screen and (max-width: 600px) {
+    .mob-flex {
+        padding-top: 60px ;
+    }
     .dropdown-lang {
         padding: 0 20px !important;
     }

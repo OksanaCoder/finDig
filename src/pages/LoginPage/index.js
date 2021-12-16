@@ -7,6 +7,7 @@ import loginImage from '@assets/images/login.png'
 import { Button } from '@material-ui/core';
 import { loginAPI } from '@services/api/auth';
 import '@styles/components/Login.css'
+import { Link } from 'react-router-dom'
 
 
 const LoginPage = ({
@@ -95,7 +96,7 @@ const LoginPage = ({
                 <a href="">Forgot your password?</a>
                 </Col>
                 <Col lg={6} md={6} sm={6} xs={6} style={{textAlign: 'right'}}>
-                <a href="" >I don't have an account</a>
+               <Link to='register'><a href="" >I don't have an account</a></Link>
                 </Col>
               </Row>
             </form>

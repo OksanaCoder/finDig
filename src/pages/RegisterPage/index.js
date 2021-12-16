@@ -8,7 +8,10 @@ import Checkbox from "@mui/material/Checkbox";
 import Input from "@components/Form/Input";
 import SignupSchema from "@helpers/Formik/validation";
 import Formik from "@helpers/Formik";
-
+import { Col, Row } from 'react-bootstrap'
+import loginImage from '@assets/images/login.png'
+import '@styles/components/Login.css'
+import { Link } from 'react-router-dom'
 import { signUpAPI } from "@services/api/auth";
 // import PrivacyPopup from "@containers/PrivacyPopup/PrivacyPopup";
 
@@ -23,11 +26,13 @@ const RegisterPage = ({
   };
 
   return (
-    <React.Fragment>
-      {/* {isPrivacyOpened && (
-                <PrivacyPopup togglePrivacyPolicy={() => setPrivacyOpened((p) => !p)}/>
-            )} */}
-      <div>
+    <Row>
+    <Col lg={6} md={6} sm={12} xs={12} className='center-vertically login-wrapper'>
+  <div>
+    <div className='text-center'>
+    <h1 className='h1'>Register</h1>
+    <h6 className='subtitle letter-space-3'>Personal data</h6>
+    </div>
         <div>
           <Formik
             initialValues={{
@@ -69,7 +74,7 @@ const RegisterPage = ({
                 
                   <Input
                     placeholder="User"
-                    label="Имя"
+                    label="Name"
                     variant="outlined"
                     type="name"
                     name="name"
@@ -78,12 +83,13 @@ const RegisterPage = ({
                     onBlur={() => setFieldTouched("name", true, false)}
                     value={values.name}
                     onChange={handleChange}
+                    className='mt-5'
                   />
                 </div>
                 <div>
                   <Input
                     placeholder="example.mail@gmail.com"
-                    label="Почта"
+                    label="Email"
                     variant="outlined"
                     type="email"
                     name="email"
@@ -92,10 +98,11 @@ const RegisterPage = ({
                     onBlur={() => setFieldTouched("email", true, false)}
                     value={values.email}
                     onChange={handleChange}
+                    className='my-5'
                   />
                   <Input
                     placeholder="+380934343444"
-                    label="Номер телефона"
+                    label="Phone number"
                     variant="outlined"
                     type="phone"
                     name="phone"
@@ -104,12 +111,13 @@ const RegisterPage = ({
                     onBlur={() => setFieldTouched("phone", true, false)}
                     value={values.phone}
                     onChange={handleChange}
+                    
                   />
                 </div>
                 <div>
                   <Input
                     placeholder="123456789"
-                    label="Пароль"
+                    label="Password"
                     variant="outlined"
                     type="password"
                     name="password"
@@ -118,23 +126,9 @@ const RegisterPage = ({
                     onBlur={() => setFieldTouched("password", true, false)}
                     value={values.password}
                     onChange={handleChange}
+                    className='mt-5'
                   />
-                  {/* <Input
-                      placeholder="123456789"
-                      label="confirm password"
-                      variant="outlined"
-                      type="password"
-                      name="confirmPassword"
-                      error={errors.confirmPassword && touched.confirmPassword}
-                      errorText={
-                          touched.confirmPassword && errors.confirmPassword
-                      }
-                      onBlur={() =>
-                          setFieldTouched("confirmPassword", true, false)
-                      }
-                      value={values.confirmPassword}
-                      onChange={handleChange}
-                  /> */}
+                 
                 </div>
                 <div
                   className="form-group form-check"
@@ -152,9 +146,9 @@ const RegisterPage = ({
                         acceptTerms: e.target.checked,
                       });
                     }}
-                    className="my-4 text-left"
+                    className="text-left"
                     control={<Checkbox className="me-2" />}
-                    label=" Я принимаю условия пользования и конфиденциальности"
+                    label="I agree with terms of use"
                   />
                 </div>
                 {/* {!checkboxValue ? (<span style={{ display: 'flex', color: 'red', justifyContent: 'center', fontSize: '14px'}}>Accept terms of use</span>) : null} */}
@@ -162,17 +156,22 @@ const RegisterPage = ({
                   type="submit"
                   color="primary"
                   variant="contained"
-                  className="btn-prime"
-                  disabled={isSubmitting || isLoadingAuth}
+                  className="my-2 btn-primary w-100 py-3"
+                  // disabled={isSubmitting || isLoadingAuth}
                 >
-                  Зарегестрироваться
+                  REGISTER
                 </Button>
               </form>
             )}
           </Formik>
         </div>
-      </div>
-    </React.Fragment>
+        </div>
+    </Col>
+    <Col lg={6} md={6} sm={12} xs={12}>
+      <img src={loginImage} alt="" width="100%"/>
+    </Col>
+
+    </Row>
   );
 };
 
