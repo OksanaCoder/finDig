@@ -27,7 +27,7 @@ const RegisterPage = ({
 
   return (
     <Row>
-    <Col lg={6} md={6} sm={12} xs={12} className='center-vertically login-wrapper'>
+    <Col lg={6} md={6} sm={12} xs={12} className='login-wrapper'>
   <div>
     <div className='text-center'>
     <h1 className='h1'>Register</h1>

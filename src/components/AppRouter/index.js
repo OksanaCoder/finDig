@@ -6,6 +6,7 @@ import BaseContainer from '@containers/BaseContainer';
 import RegisterPage from '@pages/RegisterPage';
 import './transitions.css';
 import Login from '@pages/LoginPage';
+import Companies from '@components/Companies';
 
 const AppRouter = () => {
   let location = useLocation();
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Switch location={location}>
         <PublicRoute exact path="/login" component={() => <Login />} />
         <PublicRoute exact path="/register" component={() => <RegisterPage />} />
+        <PublicRoute exact path="/companies" component={() => <Companies />} />
         {/* <PublicRoute exact path="/register" component={() => <Register />} /> */}
   
      
