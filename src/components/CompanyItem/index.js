@@ -15,11 +15,13 @@ const CompanyItem = (props) => {
             companies.map((item) => {
               return (
                 <Col lg={3} md={6} sm={12} xs={12}>
-                  <div className="flex-between">
-                    <img src={item.src} alt="" />
-                    <h6>{item.title}</h6>
+                 
+                    <img src={item.img} alt="" />
+                    <div className="flex-between">
+                    <h6 className='title'>{item.title}</h6>
+                    <h6>{item.price}</h6>
                   </div>
-                  <span>{item.text}</span>
+                  <span className='text'>{item.text}</span>
                 </Col>
               );
             })}
