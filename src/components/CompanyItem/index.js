@@ -16,7 +16,7 @@ const CompanyItem = (props) => {
               return (
                 <Col lg={3} md={6} sm={12} xs={12}>
                   <div className="flex-between">
-                    <img src={item.src} alt="" />
+                    <img src={item.img} alt="YO" />
                     <h6>{item.title}</h6>
                   </div>
                   <span>{item.text}</span>
