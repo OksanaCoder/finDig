@@ -19,6 +19,7 @@
     color: #000 !important;
     text-decoration: none !important;
 }
+
 .flex-between {
     display: flex;
     justify-content: space-between;
