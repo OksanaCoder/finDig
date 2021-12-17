@@ -54,22 +54,22 @@ const Companies = () => {
       <Container className="wrapper-companies">
         <Row>
           <Col lg={10} md={10} sm={10} xs={10}>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               Section 1
             </a>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               Section 2
             </a>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               Section 3
             </a>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               Section 4
             </a>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               Section 5
             </a>
-            <a href="" className="section-link me-5">
+            <a href="" className="section-link me-5 text">
               More
             </a>
           </Col>
@@ -78,7 +78,7 @@ const Companies = () => {
               <Dropdown.Toggle
                 as={CustomToggle}
                 id="dropdown-custom-components"
-                // className='filter-btn'
+                className='text'
               >
                 Filters
               </Dropdown.Toggle>

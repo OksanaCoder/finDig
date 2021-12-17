@@ -14,12 +14,12 @@ const CompanyItem = (props) => {
           {companies.length > 0 &&
             companies.map((item) => {
               return (
-                <Col lg={3} md={6} sm={12} xs={12}>
+                <Col lg={3} md={6} sm={12} xs={12} className='p-2'>
                  
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="" width="100%" className='my-2'/>
                     <div className="flex-between">
                     <h6 className='title'>{item.title}</h6>
-                    <h6>{item.price}</h6>
+                    <h6 className='blue font-middle'>{item.price} $</h6>
                   </div>
                   <span className='text'>{item.text}</span>
                 </Col>
