@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Row, FormControl, Dropdown } from "react-bootstrap";
-import data from "./companies.json";
+import { companies } from "./companies";
 import "@styles/components/Companies.css";
-import CompanyItem from '@components/CompanyItem';
+import CompanyItem from "@components/CompanyItem";
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
   <a
@@ -92,11 +92,10 @@ const Companies = () => {
                 <Dropdown.Item eventKey="1">Red-Orange</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            
           </Col>
         </Row>
         <Row>
-            <CompanyItem data={data}/>
+          <CompanyItem companies={companies} />
         </Row>
       </Container>
       {/* {JSON.stringify(data)} */}
