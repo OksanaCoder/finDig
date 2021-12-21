@@ -13,7 +13,7 @@ const CompanyItem = (props) => {
 
   return (
     <>
-      <Container className="wrapper-companies">
+      <Container className="wrapper-companies" fluid>
         <Row>
           {companies.length > 0 &&
             companies.map((item) => {

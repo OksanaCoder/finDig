@@ -51,7 +51,7 @@ const CustomMenu = React.forwardRef(
 const Companies = () => {
   return (
     <>
-      <Container className="wrapper-companies">
+      <Container className="wrapper-companies" fluid>
         <Row>
           <Col lg={10} md={10} sm={10} xs={10}>
             <a href="" className="section-link me-5 text">
@@ -78,7 +78,7 @@ const Companies = () => {
               <Dropdown.Toggle
                 as={CustomToggle}
                 id="dropdown-custom-components"
-                className='text'
+                className='filter-btn'
               >
                 Filters
               </Dropdown.Toggle>
