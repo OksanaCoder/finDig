@@ -32,7 +32,7 @@ const CompanyDetails = () => {
               <Col lg={8} md={8} sm={12} xs={12}>
                   <Row>
                   <Col lg={6} md={6} sm={6} xs={6}>
-                  {/* <img alt="" src={} /> */}
+                  <img alt="company" src={companyItem.img} />
                  {id}
                 </Col>
                 <Col lg={6} md={6} sm={6} xs={6}>
