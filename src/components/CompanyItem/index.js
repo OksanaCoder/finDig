@@ -22,6 +22,7 @@ const CompanyItem = (props) => {
                  
                  <Link to={{
                      pathname: `/companies/${item.id}`,
+                     state: {companyItem: item}
                  }}
                  ><img src={item.img} alt="" width="100%" className='my-2'/></Link>
                  

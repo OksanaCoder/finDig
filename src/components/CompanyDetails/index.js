@@ -3,10 +3,20 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import '@styles/components/Companies.css'
-import { useParams } from 'react-router-dom'
+import { useHistory, useLocation, useParams } from 'react-router-dom'
 
 const CompanyDetails = () => {
     const { id } = useParams();
+    const location = useLocation()
+    const history = useHistory()
+    const companyItem = location.state?.companyItem
+
+    console.log('companyItem', companyItem)
+    
+    if (!companyItem) {
+      history.push('/companies')
+    }
+
     return (
         <>
           <Container className='py-4'>
