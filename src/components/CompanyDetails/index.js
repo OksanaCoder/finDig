@@ -3,13 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "@styles/components/Companies.css";
-import { useParams } from "react-router-dom";
 import profile from "@assets/icons/profile.svg";
 import money from "@assets/icons/money.svg";
 import time from "@assets/icons/time.svg";
+import { useHistory, useLocation, useParams } from 'react-router-dom'
 
 const CompanyDetails = () => {
   const { id } = useParams();
+  const location = useLocation()
+  const history = useHistory()
+  const companyItem = location.state?.companyItem
+
+  console.log('companyItem', companyItem)
+  
+  if (!companyItem) {
+    history.push('/companies')
+  }
   return (
     <>
       <Container className="py-4">
@@ -27,8 +36,8 @@ const CompanyDetails = () => {
           <Col lg={8} md={8} sm={12} xs={12}>
             <Row>
               <Col lg={6} md={6} sm={6} xs={6}>
-                {/* <img alt="" src={} /> */}
-                {id}
+                <img alt="" src={companyItem.img} width='300'/>
+               
               </Col>
               <Col lg={6} md={6} sm={6} xs={6}>
                 {/* <img alt="" src={props.location.state.products.img} /> */}
@@ -55,32 +64,32 @@ const CompanyDetails = () => {
               <h5 className="bb-black">Analytics</h5>
               <Row>
                 <Col lg={6} md={6} sm={6} xs={6}  className="f-row">
-                  <img src={profile} alt="" />
+                  <img src={profile} alt="" className='me-2'/>
                   <div >
-                    <p>How many people visited this month</p>
+                    <p className='text-secondary m-0'>How many people visited this month</p>
                     <p>14 564</p>
                   </div>
                 </Col>
                 <Col lg={6} md={6} sm={6} xs={6}  className="f-row">
-                  <img src={money} alt="" />
+                  <img src={money} alt="" className='me-2'/>
                   <div>
-                    <p>How many people visited this month</p>
+                    <p className='text-secondary m-0'>How many people visited this month</p>
                     <p>14 564</p>
                   </div>
                 </Col>
               </Row>
               <Row>
                 <Col lg={6} md={6} sm={6} xs={6}  className="f-row">
-                  <img src={time} alt="" />
+                  <img src={time} alt="" className='me-2'/>
                   <div>
-                    <p>How many people visited this month</p>
+                    <p className='text-secondary m-0'>How many people visited this month</p>
                     <p>14 564</p>
                   </div>
                 </Col>
                 <Col lg={6} md={6} sm={6} xs={6}  className="f-row">
-                  <img src={profile} alt="" />
+                  <img src={profile} alt="" className='me-2'/>
                   <div>
-                    <p>How many people visited this month</p>
+                    <p className='text-secondary m-0'>How many people visited this month</p>
                     <p>14 564</p>
                   </div>
                 </Col>
