@@ -45,9 +45,10 @@ const Blog = () => {
                 </Card.Text>
                 <div className="d-flex justify-content-between align-items-center">
                   <small className="grey-small ">May 20th 2020</small>
-                  <button className="more-btn color-blue-bold">
+                   <Link to="/articleDetails"> <button className="more-btn color-blue-bold">
                     Read more
                   </button>
+                  </Link>
                 </div>{" "}
               </Card.Body>
             </Card>
@@ -64,9 +65,9 @@ const Blog = () => {
                 </Card.Text>
                 <div className="d-flex justify-content-between align-items-center">
                   <small className="grey-small ">May 20th 2020</small>
-                  <button className="more-btn color-blue-bold">
+                  <Link to="/articleDetails"><button className="more-btn color-blue-bold">
                     Read more
-                  </button>
+                  </button></Link>
                 </div>{" "}
               </Card.Body>
             </Card>
@@ -83,9 +84,9 @@ const Blog = () => {
                 </Card.Text>
                 <div className="d-flex justify-content-between align-items-center">
                   <small className="grey-small ">May 20th 2020</small>
-                  <button className="more-btn color-blue-bold">
+                  <Link to="/articleDetails"><button className="more-btn color-blue-bold">
                     Read more
-                  </button>
+                  </button></Link>
                 </div>{" "}
               </Card.Body>
             </Card>
