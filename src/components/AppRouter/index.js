@@ -9,6 +9,8 @@ import "./transitions.css";
 import Login from "@pages/LoginPage";
 import Companies from "@components/Companies";
 import { companies } from "../Companies/companies";
+import Blog from '@components/Blog';
+import BlogDetails from '@components/BlogDetails';
 
 const AppRouter = () => {
   let location = useLocation();
@@ -23,6 +25,9 @@ const AppRouter = () => {
           component={() => <RegisterPage />}
         />
         <PublicRoute exact path="/companies" component={() => <Companies />} />
+        <PublicRoute exact path="/blog" component={() => <Blog />} />
+        <PublicRoute exact path="/articleDetails" component={() => <BlogDetails />} />
+        
         <PublicRoute
           exact
           path="/companies/:id"

@@ -56,6 +56,10 @@
     border-bottom : 1px solid #B1B1B1;
     padding-bottom: 10px;
 }
+.bb-black-secondary {
+    border-bottom: 1px solid #D9D9D9;
+
+}
 .text-main {
     color: #5E5E5E;
 }

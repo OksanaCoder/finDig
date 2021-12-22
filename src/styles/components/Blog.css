@@ -1,0 +1,117 @@
+.border-20 {
+  border: 1px solid #e2e2e2;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.25);
+  border-radius: 15px !important;
+}
+.border-15 {
+    border-radius: 10px;
+}
+.color-blue-bold {
+  color: #1385cc;
+  font-weight: 700;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.grey-small {
+  color: #718096;
+  font-size: 10px;
+}
+.more-btn {
+  font-size: 10px;
+  border: none;
+  background: none;
+}
+.back-blue {
+    background: #F7FAFC !important;
+}
+.card-text p {
+    padding: 0 !important;
+}
+.flex-card {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  /* flex-wrap: wrap !important; */
+}
+.img-card {
+    width: 100% !important;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0 !important;
+}
+.img-card-big {
+    width: 50% !important;
+    /* height: 200px; */
+    object-fit: cover;
+    border-radius: 0 15px 15px 0 !important;
+}
+.img-card-details {
+    width: 100% !important;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px !important;
+}
+.card-body {
+    padding: 20px !important;
+}
+/* .wrapping {
+    flex-wrap: wrap;
+} */
+@media screen and (max-width: 700px) {
+
+  .flex-card {
+    padding: 0 !important;
+  }
+  .card-text {
+    padding: 20px 10px 10px 10px;
+  }
+  .flex-card {
+    flex-wrap: wrap;
+  }
+  .img-card,
+  .img-card-big {
+      width: 100% !important;
+      border-radius: 0 0 15px 15px !important;
+      height: auto;
+      object-fit: initial !important;
+  }
+  .img-card-details {
+    width: 100% !important;
+  }
+  .wrapping {
+      flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+    .img-card-details {
+        width: 100% !important;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px !important;
+    }
+}
+
+.bold-italic {
+    font-weight: 700;
+    font-style: italic;
+}
+.bold-style {
+    font-weight: 700;
+}
+.arrow-left {
+    position: absolute;
+    left: -60px;
+    width: 40px !important;
+}
+.arrow-up {
+    position: absolute;
+    right: -60px;
+    width: 40px !important;
+    bottom: 60px;
+}
