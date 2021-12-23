@@ -11,6 +11,7 @@ import Companies from "@components/Companies";
 import { companies } from "../Companies/companies";
 import Blog from '@components/Blog';
 import BlogDetails from '@components/BlogDetails';
+import Home from '@components/Home'
 
 const AppRouter = () => {
   let location = useLocation();
@@ -27,6 +28,7 @@ const AppRouter = () => {
         <PublicRoute exact path="/companies" component={() => <Companies />} />
         <PublicRoute exact path="/blog" component={() => <Blog />} />
         <PublicRoute exact path="/articleDetails" component={() => <BlogDetails />} />
+        <PublicRoute exact path="/home" component={() => <Home />} />
         
         <PublicRoute
           exact
