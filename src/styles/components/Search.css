@@ -1,0 +1,49 @@
+.bag-blue {
+  background: #1385cc !important;
+  border: 1px solid #1385cc !important;
+  border-radius: 5px !important;
+}
+.flex-row-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.row-with-border {
+  border-bottom: 1px solid #dbdbdb;
+}
+.blue-btn-fill {
+  padding: 5px 10px;
+  width: 88%;
+  color: #fff;
+  background: #1385cc;
+  border-radius: 4px;
+  border: none;
+}
+.btn-blue-border {
+  padding: 5px 10px;
+  width: 88%;
+  color: #000;
+  border: 2px solid #1385cc;
+  background: none;
+  border-radius: 4px;
+}
+.light-grey {
+  color: #828282;
+}
+.blue-color {
+  color: #009dff;
+}
+.score-box {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px 20px 10px 20px;
+}
