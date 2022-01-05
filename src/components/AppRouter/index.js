@@ -13,6 +13,7 @@ import Blog from '@components/Blog';
 import BlogDetails from '@components/BlogDetails';
 import Search from '@components/SearchPage'
 import Home from '@components/Home'
+import RegisterPageBusiness from "@pages/RegisterPageBusiness/index.js";
 
 const AppRouter = () => {
   let location = useLocation();
@@ -23,8 +24,13 @@ const AppRouter = () => {
         <PublicRoute exact path="/login" component={() => <Login />} />
         <PublicRoute
           exact
-          path="/register"
+          path="/registerPersonal"
           component={() => <RegisterPage />}
+        />
+         <PublicRoute
+          exact
+          path="/registerBusiness"
+          component={() => <RegisterPageBusiness />}
         />
         <PublicRoute exact path="/companies" component={() => <Companies />} />
         <PublicRoute exact path="/blog" component={() => <Blog />} />
