@@ -13,7 +13,7 @@ const MySteps = () => {
           <FinishRegister />
         </div>
         <div>
-          <FinishRegister />
+        <Valuation />
         </div>
         <div>
           <Valuation />
