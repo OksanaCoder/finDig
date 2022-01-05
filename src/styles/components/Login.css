@@ -57,3 +57,11 @@ font-weight: 300;
 .letter-space-3 {
     letter-spacing: 3px;
 }
+.left-border-blue {
+    border-left: 3px solid #1385CC;
+    padding-left: 10px;
+}
+.left-border-blue-dark {
+    border-left: 3px solid #0B5C8E;
+    padding-left: 10px;
+}
