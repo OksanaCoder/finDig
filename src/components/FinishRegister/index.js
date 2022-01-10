@@ -12,60 +12,76 @@ import { Col, Row } from "react-bootstrap";
 import loginImage from "@assets/images/login.png";
 import "@styles/components/Login.css";
 import { Alert } from "react-bootstrap";
+import done from '@assets/icons/done-icon.svg'
 
 const FinishRegister = () => {
   return (
     <>
       <Row>
         <Col lg={6} md={6} sm={12} xs={12} className="login-wrapper">
-          <Alert variant="secondary">
-            <h4>Congratulations!</h4>
-            <br></br>
+          <Alert variant="secondary" className="d-flex align-items-center justify-content-between">
+              <div>
+            <h4 >Congratulations!</h4>
+            {/* <br></br> */}
             You have just established a page for your company
+            </div>
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.1531 0.49422C30.9226 0.49422 39.6531 9.22467 39.6531 19.9942C39.6531 30.7636 30.9226 39.4941 20.1531 39.4941C9.38361 39.4941 0.653157 30.7636 0.653157 19.9942C0.622513 9.2552 9.30323 0.524864 20.0421 0.49422C20.0791 0.494114 20.1161 0.494114 20.1531 0.49422Z" fill="#3BB54A"/>
+<path d="M30.9559 14.6198L17.1065 28.4692L9.35083 20.769L12.5085 17.6667L17.1065 22.2094L27.7983 11.5176L30.9559 14.6198Z" fill="white"/>
+</svg>
+
           </Alert>
-          <h2 className="blue-color">Apple Inc.</h2>
+          <h2 className="blue-color p-4">Apple Inc.</h2>
           <div className="left-border-blue">
             <p>General Information</p>
-            <Row>
+            <Row className='mb-3'>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <p>Link</p>
+                <p className='grey-light-thin m-0'>Link</p>
                 <small>wwww.apple.com</small>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <p>Age of business</p>
+                <p className='grey-light-thin m-0'>Age of business</p>
                 <small>1-2 years</small>
               </Col>{" "}
               <Col lg={4} md={4} sm={4} xs={4}>
-                <p>Genre</p>
+                <p className='grey-light-thin m-0'>Genre</p>
                 <small>Saas</small>
               </Col>
             </Row>
-            <p>Description</p>
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-             <p>Inventory (how many assets are included in the deal)</p>   
-             <p>Iphone and Imacs</p>
-            </p>
+            <Row >
+            <p className='grey-light-thin m-0 mb-2'>Description</p>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here,
+              content here',
+              </p>
+              </Row>
+              <p className='grey-light-thin m-0 mb-2'>Inventory (how many assets are included in the deal)</p>
+              <p>Iphone and Imacs</p>
+ 
           </div>
-          <div className='left-border-blue-dark'>
-              <p>Financials</p>
-              <Row>
+          <div className="left-border-blue-dark">
+            <p>Financials</p>
+            <Row>
               <Col lg={3} md={3} sm={12} xs={12}>
-                <p>Revenues (p/mo)</p>
+                <p className='grey-light-thin'>Revenues (p/mo)</p>
                 <small>$120K</small>
               </Col>{" "}
               <Col lg={3} md={3} sm={12} xs={12}>
-                <p>Net profit (p/mo)</p>
+                <p className='grey-light-thin'>Net profit (p/mo)</p>
                 <small>$120K</small>
               </Col>{" "}
               <Col lg={3} md={3} sm={12} xs={12}>
-                <p>12 months average profit</p>
+                <p className='grey-light-thin'>12 months average profit</p>
                 <small>$120K</small>
               </Col>{" "}
               <Col lg={3} md={3} sm={12} xs={12}>
-                <p>Traffic</p>
+                <p className='grey-light-thin'>Traffic</p>
                 <small>500K+ visitors a month</small>
               </Col>{" "}
-              </Row>
+            </Row>
           </div>
           <Formik
             initialValues={{
@@ -76,20 +92,20 @@ const FinishRegister = () => {
             }}
             validationSchema={SignupSchema}
             onSubmit={(values, actions) => {
-            //   registerUser(values).catch((error) => {
-            //     console.log(JSON.stringify(error));
-            //     actions.setErrors({
-            //       email: " ",
-            //       password: " ",
-            //       name: " ",
-            //       phone: " ",
-            //     });
-            //     // if (error?.notification) {
-            //     //     addNotificationAction({type: "error", text: error.message});
-            //     //     return
-            //     // }
-            //     // console.log(error)
-            //   });
+              //   registerUser(values).catch((error) => {
+              //     console.log(JSON.stringify(error));
+              //     actions.setErrors({
+              //       email: " ",
+              //       password: " ",
+              //       name: " ",
+              //       phone: " ",
+              //     });
+              //     // if (error?.notification) {
+              //     //     addNotificationAction({type: "error", text: error.message});
+              //     //     return
+              //     // }
+              //     // console.log(error)
+              //   });
             }}
           >
             {({
@@ -102,35 +118,37 @@ const FinishRegister = () => {
               isSubmitting,
               setValues,
             }) => (
-              <form onSubmit={handleSubmit}>
-          <FormControlLabel
-                    name="acceptTerms"
-                    onChange={(e) => {
-                      setValues({
-                        ...values,
-                        acceptTerms: e.target.checked,
-                      });
-                    }}
-                    className="text-left"
-                    control={<Checkbox className="me-2" />}
-                    label="I agree with terms of use"
-                  />
-                  <br></br>
-                    <FormControlLabel
-                    name="acceptTerms"
-                    onChange={(e) => {
-                      setValues({
-                        ...values,
-                        acceptTerms: e.target.checked,
-                      });
-                    }}
-                    className="text-left"
-                    control={<Checkbox className="me-2" />}
-                    label="I agree with Privacy policy of the site"
-                  />
-                  </form>
-                      )}
-                  </Formik>
+              <form onSubmit={handleSubmit} className='m-3'>
+                <FormControlLabel
+                  name="acceptTerms"
+                  onChange={(e) => {
+                    setValues({
+                      ...values,
+                      acceptTerms: e.target.checked,
+                    });
+                  }}
+                  className="text-left grey-light-thin"
+                  control={<Checkbox className="me-2 blue-checkbox" />}
+                  label="I agree with "
+                />
+               <small className='blue-light-thin'>terms of use</small>
+                <br></br>
+                <FormControlLabel
+                  name="acceptTerms"
+                  onChange={(e) => {
+                    setValues({
+                      ...values,
+                      acceptTerms: e.target.checked,
+                    });
+                  }}
+                  className="grey-light-thin"
+                  control={<Checkbox className="me-2 blue-checkbox" />}
+                  label="I agree with"
+                />
+                   <small className='blue-light-thin'>Privacy policy of the site</small>
+              </form>
+            )}
+          </Formik>
         </Col>
         <Col lg={6} md={6} sm={12} xs={12}>
           <img src={loginImage} alt="" width="100%" />
