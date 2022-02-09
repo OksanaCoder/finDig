@@ -13,6 +13,7 @@ import loginImage from "@assets/images/login.png";
 import "@styles/components/Login.css";
 import { Link } from "react-router-dom";
 import { signUpAPI } from "@services/api/auth";
+import backImg from '@assets/icons/back-arrow-blue.svg'
 
 const Valuation = ({
   isLoadingAuth,
@@ -29,6 +30,7 @@ const Valuation = ({
       <Row>
         <Col lg={6} md={6} sm={12} xs={12} className="login-wrapper">
           <div>
+              <img src={backImg} alt="" />
             <h3>Valuation tool</h3>
             <h6>Valuate your business worth</h6>
             <Formik
