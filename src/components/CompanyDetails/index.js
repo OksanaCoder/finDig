@@ -29,10 +29,10 @@ const CompanyDetails = () => {
   return (
     <>
       <Container className="py-4">
-        <small>Flexible search/Company name</small>
+        <small>Flexible search/{companyItem.title}</small>
         <Row className="my-3">
           <Col lg={6} md={6} sm={6} xs={6}>
-            <h5> Company name</h5>
+            <h5>{companyItem.title}</h5>
           </Col>
           <Col lg={6} md={6} sm={6} xs={6} className="text-right">
             <FontAwesomeIcon icon={faHeart} className="me-2 blue-color" />
@@ -260,7 +260,7 @@ const CompanyDetails = () => {
 
           <Col lg={4} md={4} sm={12} xs={12}>
             <div className='border-thin'>
-              <h3 className="bb-black">236 000$</h3>
+              <h3 className="bb-black">${companyItem.price}</h3>
               <Row>
                 <Col>
                   <div className="f-row justify-content-start">

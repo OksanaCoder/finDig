@@ -8,6 +8,11 @@ import { Button } from '@material-ui/core';
 import { loginAPI } from '@services/api/auth';
 import '@styles/components/Login.css'
 import { Link } from 'react-router-dom'
+import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
+import google from '@assets/icons/google.svg'
+import facebook from '@assets/icons/facebook.png'
+
 
 
 const LoginPage = ({
@@ -19,6 +24,13 @@ const LoginPage = ({
   const handleSubmit1 = () => {
     return loginAPI();
   };
+  const responseGoogle = (response) => {
+    console.log(response);
+  }
+  const responseFacebook = (response) => {
+    console.log(response);
+  }
+   
   return (
     <Row>
       <Col lg={6} md={6} sm={12} xs={12} className='center-vertically login-wrapper'>
@@ -66,7 +78,7 @@ const LoginPage = ({
               />
               <Input
                 placeholder="**********"
-                label="Пароль"
+                label="Password"
                 type="password"
                 name="password"
                 variant="outlined"
@@ -82,6 +94,7 @@ const LoginPage = ({
               <div>
                 {/* <Link to="/forgot">Forgot password ?</Link> */}
                 <Button
+                
                   type="submit"
                   variant="contained"
                   color="primary"
@@ -90,8 +103,32 @@ const LoginPage = ({
                 >
                   Login
                 </Button>
+
               </div>
-              <Row className='d-flex align-items-center justify-content-between'>
+              <div className='d-flex justify-content-center'>
+                <img alt="" src={google} width='30' className='me-3' />
+                <img alt="" src={facebook} width='30'/>
+              {/* <GoogleLogin
+                clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                buttonText="Login"
+                onSuccess={responseGoogle}
+                onFailure={responseGoogle}
+                cookiePolicy={'single_host_origin'}
+                className='mb-4'
+                style={{width: '50%'}}
+            
+              />
+               <FacebookLogin
+                appId="1088597931155576"
+                autoLoad={true}
+                fields="name,email,picture"
+                onClick={responseFacebook}
+                callback={responseFacebook} 
+               
+                /> */}
+                </div>
+         
+              <Row className='d-flex mt-3 align-items-center justify-content-between'>
                 <Col lg={6} md={6} sm={6} xs={6} >
                 <a href="">Forgot your password?</a>
                 </Col>

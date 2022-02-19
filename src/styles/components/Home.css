@@ -1,6 +1,6 @@
 .home-head {
   background: url("@assets/images/home-bag.png") center center no-repeat;
-  padding: 100px;
+  padding: 130px 100px 130px 100px;
   /* height: 100%; */
   color: #fff;
 }
@@ -151,4 +151,7 @@ border-radius: 10px;
 }
 .w-300 {
     width: 300px;
+}
+.position-relative {
+  position: relative;
 }

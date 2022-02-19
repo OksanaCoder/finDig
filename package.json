@@ -69,7 +69,9 @@
         "react-bootstrap": "^2.0.1",
         "react-dev-utils": "^11.0.3",
         "react-dom": "^17.0.2",
+        "react-facebook-login": "^4.1.1",
         "react-geetest": "^5.0.1",
+        "react-google-login": "^5.2.2",
         "react-google-recaptcha": "^2.1.0",
         "react-html5video": "^2.5.1",
         "react-insta-stories": "^2.3.0",
@@ -128,7 +130,7 @@
     "engines": {
         "node": "12.1.0",
         "npm": "6.9.0"
-      },
+    },
     "devDependencies": {
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^8.3.0",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Navbar, Nav, Button, NavDropdown } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import '@styles/components/HeaderContainer.css'
 
 const HeaderContainer = () => {
@@ -28,9 +29,10 @@ const HeaderContainer = () => {
               style={{ maxHeight: "100px" }}
               
             >
-              <Nav.Link href="#action1" className='ms-5 text-dark no-bold'>About us</Nav.Link>
+             <Link className='text-decoration-none' to='/home'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>About us</Nav.Link></Link> 
+            
               <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Categories</Nav.Link>
-              <Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link>
+              <Link className='text-decoration-none' to='/blog'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link></Link> 
               <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link>
             </Nav>
             <Nav className="ml-auto mob-flex">

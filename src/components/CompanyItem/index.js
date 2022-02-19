@@ -18,19 +18,21 @@ const CompanyItem = (props) => {
           {companies.length > 0 &&
             companies.map((item) => {
               return (
-                <Col lg={3} md={6} sm={12} xs={12} className='p-2'>
+                <Col lg={2} md={3} sm={12} xs={12} className='p-2'>
                  
                  <Link to={{
                      pathname: `/companies/${item.id}`,
                      state: {companyItem: item}
                  }}
-                 ><img src={item.img} alt="" width="100%" className='my-2'/></Link>
+                 ><img src={item.img} alt="" width="100%" className='my-3 card-item'/></Link>
                  
-                    <div className="flex-between">
+                    <div>
                     <h6 className='title'>{item.title}</h6>
-                    <h6 className='blue font-middle'>{item.price} $</h6>
+                    
+                  
+                  <span className='text'>{item.text.slice(0, 70)}..</span>
+                  <p className='blue font-middle text-right mt-2'>{item.price} $</p>
                   </div>
-                  <span className='text'>{item.text}</span>
                 </Col>
               );
             })}
