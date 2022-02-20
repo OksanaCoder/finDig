@@ -8,12 +8,12 @@ import CompanyDetails from "@components/CompanyDetails";
 import "./transitions.css";
 import Login from "@pages/LoginPage";
 import Companies from "@components/Companies";
-import { companies } from "../Companies/companies";
 import Blog from '@components/Blog';
 import BlogDetails from '@components/BlogDetails';
 import Search from '@components/SearchPage'
 import Home from '@components/Home'
 import RegisterPageBusiness from "@pages/RegisterPageBusiness/index.js";
+import Contacts from '@components/Contacts/index.js'
 
 const AppRouter = () => {
   let location = useLocation();
@@ -37,6 +37,7 @@ const AppRouter = () => {
         <PublicRoute exact path="/articleDetails" component={() => <BlogDetails />} />
         <PublicRoute exact path="/home" component={() => <Home />} />
           <PublicRoute exact path="/search" component={() => <Search />} />
+          <PublicRoute exact path="/contacts" component={() => <Contacts />} />
         
         <PublicRoute
           exact

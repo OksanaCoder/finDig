@@ -29,9 +29,10 @@ const CompanyDetails = () => {
   return (
     <>
       <Container className="py-4">
-        <small>Flexible search/{companyItem.title}</small>
+     
         <Row className="my-3">
           <Col lg={6} md={6} sm={6} xs={6}>
+          <small>Flexible search/{companyItem.title}</small>
             <h5>{companyItem.title}</h5>
           </Col>
           <Col lg={6} md={6} sm={6} xs={6} className="text-right">
@@ -40,7 +41,7 @@ const CompanyDetails = () => {
           </Col>
         </Row>
         <Row className="justify-content-between">
-          <Col lg={8} md={8} sm={12} xs={12}>
+          <Col lg={7} md={7} sm={12} xs={12}>
             <Row>
               <Col lg={6} md={6} sm={12} xs={12}>
                 <img alt="" src={companyItem.img} width="300" />
@@ -340,6 +341,7 @@ const CompanyDetails = () => {
                 </div>
               </Row>
               <Button className='contact-btn'>Contact</Button>
+              <Button className='contact-btn mt-3'>FinDig Valuation</Button>
             </div>
           </Col>
         </Row>

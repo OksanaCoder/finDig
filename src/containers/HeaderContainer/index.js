@@ -30,10 +30,10 @@ const HeaderContainer = () => {
               
             >
              <Link className='text-decoration-none' to='/home'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>About us</Nav.Link></Link> 
-            
-              <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Categories</Nav.Link>
+             
+             <Link className='text-decoration-none' to='/search'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Categories</Nav.Link></Link> 
               <Link className='text-decoration-none' to='/blog'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link></Link> 
-              <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link>
+              <Link className='text-decoration-none' to='/contacts'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link></Link> 
             </Nav>
             <Nav className="ml-auto mob-flex">
               <Button className='btn-login'>Login</Button>
