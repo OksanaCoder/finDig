@@ -13,6 +13,7 @@ import loginImage from "@assets/images/login.png";
 import "@styles/components/Login.css";
 import { Alert } from "react-bootstrap";
 import done from '@assets/icons/done-icon.svg'
+import {companies} from '../Companies/companies'
 
 const FinishRegister = () => {
   return (
@@ -31,13 +32,13 @@ const FinishRegister = () => {
 </svg>
 
           </Alert>
-          <h2 className="blue-color p-4">Zayraz</h2>
-          <div className="left-border-blue">
+          <h2 className="blue-color p-4">{companies[0].title}</h2>
+                <div className="left-border-blue">
             <p>General Information</p>
             <Row className='mb-3'>
               <Col lg={4} md={4} sm={4} xs={4}>
                 <p className='grey-light-thin m-0'>Link</p>
-                <small>wwww.apple.com</small>
+                <small>wwww.zayrax.com</small>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
                 <p className='grey-light-thin m-0'>Age of business</p>
@@ -51,11 +52,7 @@ const FinishRegister = () => {
             <Row >
             <p className='grey-light-thin m-0 mb-2'>Description</p>
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here',
+                {companies[0].text}
               </p>
               </Row>
               <p className='grey-light-thin m-0 mb-2'>Inventory (how many assets are included in the deal)</p>

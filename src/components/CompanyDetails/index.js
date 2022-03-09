@@ -264,7 +264,7 @@ const CompanyDetails = () => {
 
                     <Col lg={4} md={4} sm={12} xs={12}>
                         <div className='border-thin'>
-                            <h3 className="bb-black">${filteredPrice}</h3>
+                            <h3 className="bb-black">${companyItem.price}</h3>
                             <Row>
                                 <Col>
                                     <div className="f-row justify-content-start">
@@ -344,7 +344,7 @@ const CompanyDetails = () => {
                                 </div>
                             </Row>
                             <Button className='contact-btn'>Contact</Button>
-                            <Button className='contact-btn mt-3' disabled={!btnDisabled} onClick={()=>SetfilteredPrice(filteredPrice-2000) ||  SetBtnDisable(btnDisabled=false)}>FinDig Valuation</Button>
+                            <Button className='contact-btn mt-3' disabled={!btnDisabled} onClick={()=>SetfilteredPrice(filteredPrice-2000) ||  SetBtnDisable(btnDisabled=false)}>FinDig Valuation ${filteredPrice}</Button>
                         </div>
                     </Col>
                 </Row>
