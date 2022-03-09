@@ -344,7 +344,7 @@ const CompanyDetails = () => {
                                 </div>
                             </Row>
                             <Button className='contact-btn'>Contact</Button>
-                            <Button className='contact-btn mt-3' disabled={!btnDisabled} onClick={()=>SetfilteredPrice(filteredPrice-2000) ||  SetBtnDisable(btnDisabled=false)}>FinDig Valuation ${filteredPrice}</Button>
+                            <Button className='contact-btn mt-3' disabled={!btnDisabled} onClick={()=>SetfilteredPrice(filteredPrice-2000) ||  SetBtnDisable(btnDisabled=false)}>FinDig Valuation <span> {!btnDisabled ? `${filteredPrice}$` : ''}</span></Button>
                         </div>
                     </Col>
                 </Row>
