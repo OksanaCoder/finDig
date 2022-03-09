@@ -7,12 +7,11 @@ import loginImage from '@assets/images/login.png'
 import { Button } from '@material-ui/core';
 import { loginAPI } from '@services/api/auth';
 import '@styles/components/Login.css'
-import { Link } from 'react-router-dom'
+import { Link,BrowserRouter,useHistory } from 'react-router-dom'
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import google from '@assets/icons/google.svg'
 import facebook from '@assets/icons/facebook.png'
-
 
 
 const LoginPage = ({
@@ -21,8 +20,10 @@ const LoginPage = ({
   pendingAction,
   addNotificationAction,
 }) => {
+  const history = useHistory()
   const handleSubmit1 = () => {
-    return loginAPI();
+    history.push("/home")
+
   };
   const responseGoogle = (response) => {
     console.log(response);
@@ -30,7 +31,7 @@ const LoginPage = ({
   const responseFacebook = (response) => {
     console.log(response);
   }
-   
+
   return (
     <Row>
       <Col lg={6} md={6} sm={12} xs={12} className='center-vertically login-wrapper'>
@@ -50,7 +51,7 @@ const LoginPage = ({
                 email: ' ',
                 password: ' ',
               });
-        
+
             });
           }}
         >
@@ -90,11 +91,11 @@ const LoginPage = ({
                 onChange={handleChange}
                 className='my-1'
               />
-              
+
               <div>
                 {/* <Link to="/forgot">Forgot password ?</Link> */}
                 <Button
-                
+
                   type="submit"
                   variant="contained"
                   color="primary"
@@ -127,7 +128,7 @@ const LoginPage = ({
                
                 /> */}
                 </div>
-         
+
               <Row className='d-flex mt-3 align-items-center justify-content-between'>
                 <Col lg={6} md={6} sm={6} xs={6} >
                 <a href="">Forgot your password?</a>

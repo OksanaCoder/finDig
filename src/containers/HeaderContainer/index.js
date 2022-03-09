@@ -8,7 +8,8 @@ const HeaderContainer = () => {
     <>
       <Navbar  className='navMain' expand="lg">
         <Container fluid>
-          <Navbar.Brand href="#">
+            <Link to="/home">
+          <Navbar.Brand href="#" >
             <svg
               width="87"
               height="31"
@@ -22,6 +23,7 @@ const HeaderContainer = () => {
               />
             </svg>
           </Navbar.Brand>
+            </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -29,11 +31,10 @@ const HeaderContainer = () => {
               style={{ maxHeight: "100px" }}
               
             >
-             <Link className='text-decoration-none' to='/home'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>About us</Nav.Link></Link> 
-             
-             <Link className='text-decoration-none' to='/search'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Categories</Nav.Link></Link> 
-              <Link className='text-decoration-none' to='/blog'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link></Link> 
-              <Link className='text-decoration-none' to='/contacts'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link></Link> 
+             <Link className='text-decoration-none' to='/companies'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Companies</Nav.Link></Link>
+              <Link className='text-decoration-none' to='/blog'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Blog</Nav.Link></Link>
+                <Link className='text-decoration-none' to='/search'><Nav.Link href="#action1" className='ms-5 text-dark no-bold'>Search</Nav.Link></Link>
+                <Link className='text-decoration-none' to='/contacts'> <Nav.Link href="#action2" className='ms-5 text-dark no-bold'>Contact us</Nav.Link></Link>
             </Nav>
             <Nav className="ml-auto mob-flex">
               <Button className='btn-login'>Login</Button>
