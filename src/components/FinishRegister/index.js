@@ -31,7 +31,7 @@ const FinishRegister = () => {
 </svg>
 
           </Alert>
-          <h2 className="blue-color p-4">Apple Inc.</h2>
+          <h2 className="blue-color p-4">Zayraz</h2>
           <div className="left-border-blue">
             <p>General Information</p>
             <Row className='mb-3'>
